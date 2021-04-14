@@ -1,0 +1,1001 @@
+﻿/** ***** GENERALES ***** **/
+body, html{
+	width:100%;
+	height:100%;
+	margin:0;
+	padding:0;
+	font-family: ebrima;
+}
+div, input, textarea, select, table,a, span{
+	box-sizing:border-box;
+}
+@media screen and (max-width: 1000px) {
+	body{
+		font-size:100%;
+		text-size-adjust:none;
+	}
+}
+
+
+/** ***** MENU PRINCIPAL ***** **/
+.menuPrincipal{
+	position: fixed;
+	width: 100%;
+	height: 139px;
+	padding:15px 10%;
+	background-color: rgba(255, 255, 255, 0.78);
+	top: 0;
+	z-index:10;
+	transition:1s;
+}
+.menuPrincipal .contenedorItemsMenuPpal{
+	width:100%;
+	transition:1s;
+}
+.menuPrincipal .contenedorItemsMenuPpal .contLinksMenuPpal{
+	text-align:justify;
+	vertical-align:bottom;
+	padding-bottom:45px;
+	transition:1s;
+	width:30%;
+}
+.menuPrincipal .contenedorItemsMenuPpal .contLinksMenuPpal:after{
+	content: "";
+	display: inline-block;
+	width: 100%;
+}
+.menuPrincipal .contenedorItemsMenuPpal .contLinksMenuPpal a{
+	text-decoration:none;
+	font-size:20px;
+	color:#3b0211;
+}
+.menuPrincipal .contenedorItemsMenuPpal .contLinksMenuPpal a:hover, .menuPrincipal .contenedorItemsMenuPpal .contLinksMenuPpal .seleccionado{
+	color:#971228;
+	font-weight: bold;
+}
+.menuPrincipal .contenedorItemsMenuPpal .logo{
+	width:213px;
+	text-align:center;
+	transition:1s;
+}
+.menuPrincipal .contenedorItemsMenuPpal .logo img{
+	box-shadow: 0 0 20px 0px #FFF;
+	border-radius: 73px;
+	cursor:pointer;
+	transition:1s;
+}
+.menuPrincipalRESP{
+	display:none;
+}
+@media screen and (max-width: 1000px) {
+	.menuPrincipal{
+		display:none;
+	}
+	.menuPrincipalRESP{
+		display:block;
+		position:fixed;
+		width:100%;
+		height:auto;
+		/* height:140px; */
+		top:0;
+		left:0;
+		padding:20px;
+		background-color: rgba(255, 255, 255, 0.78);
+		z-index:10;
+	}
+	.menuPrincipalRESP .tablaMenuResp{
+		width:100%;
+		height:100%;
+	}
+	.menuPrincipalRESP .tablaMenuResp .contLogoResp{
+		width:80%;
+		text-align:left;
+	}
+	.menuPrincipalRESP .tablaMenuResp .contLogoResp img{
+		max-width:100%;
+		max-height:140px;
+	}
+	.menuPrincipalRESP .tablaMenuResp .contMenuResp{
+		width:20%;
+		text-align:right;
+	}
+	.menuPrincipalRESP .tablaMenuResp .contMenuResp img{
+		height:70px;
+	}
+	#menuResponsiveDesp{
+		display:none;
+		position:fixed;
+		top:189px;
+		left:0;
+		right:0;
+		bottom:0;
+		z-index:20;
+		background:rgba(255,255,255,0.9);
+		padding-top:100px;
+	}
+	#menuResponsiveDesp .itemMenuResponsiveDesp{
+		width:100%;
+		color:#9A181D;
+		font-size:40px;
+		text-align:center;
+		margin-top:80px;
+		font-weight:bold;
+		cursor:pointer;
+	}
+}
+/** ***** HOME ***** **/
+.seccionPpal{
+	display:block;
+	position:relative;
+	width:100%;
+	min-height:100%;
+	padding-top:30px;
+}
+.seccionPpal .abajoSeccion{
+	position: absolute;
+	margin-left: -20px;
+	left: 50%;
+	bottom: 20px;
+	cursor: pointer;
+}
+.seccionPpal .tituloSeccion{
+	display:bloc;
+	width:100%;
+	text-align:center;
+	font-size:23px;
+	color:#9c1329;
+	font-weight:bold;
+	padding:30px;
+}
+.seccionHome{
+	background-image:url(../images/bkgHome.png);
+	background-size:cover;
+}
+.seccionHome .EPHome{
+	position: absolute;
+	margin-left: -105px;
+	left: 50%;
+	top: 175px;
+	cursor: pointer;
+}
+.seccionHome .lineaSubrayadoHome{
+	position:absolute;
+	width:100%;
+	height:12px;
+	background:rgba(151, 18, 40, 0.67);
+	bottom:0;
+}
+@media screen and (max-width: 1000px) {
+	.seccionHome{
+		background-image:url(../images/bkgHome_res.png);
+		background-size:cover;
+	}
+	#seccionHome .EPHome{
+		display:none;
+	}
+	.contSlider .contItemsSlider .itemSlider{
+		font-size:40px !important;
+	}
+	.seccionPpal .abajoSeccion{
+		margin-left:-50px;
+	}
+	.seccionPpal .abajoSeccion img{
+		width:100px;
+	}
+	.seccionPpal .abajoSeccion{
+		bottom:50px;
+	}
+}
+
+/** ***** SERVICIOS ***** */
+.seccionServicios{
+	background-image:url(../images/bkgServicios.png);
+	background-size:cover;
+	padding-bottom:100px;
+}
+.seccionServicios .tablaServicios{
+	width:80%;
+	margin-left:10%;
+}
+.seccionServicios .tablaServicios #cajaServicio1{
+	background:rgba(181, 11, 37, 1);
+}
+.seccionServicios .tablaServicios #cajaServicio1:hover{
+	background:rgba(181, 11, 37, 0.85);
+}
+.seccionServicios .tablaServicios #cajaServicio2{
+	background:rgba(150, 8, 30, 1);
+}
+.seccionServicios .tablaServicios #cajaServicio2:hover{
+	background:rgba(150, 8, 30, 0.85);
+}
+.seccionServicios .tablaServicios #cajaServicio3{
+	background:rgba(93, 3, 15, 1);
+}
+.seccionServicios .tablaServicios #cajaServicio3:hover{
+	background:rgba(93, 3, 15, 0.85);
+}
+.seccionServicios .tablaServicios #cajaServicio4{
+	background:rgba(61, 0, 7, 1);
+}
+.seccionServicios .tablaServicios #cajaServicio4:hover{
+	background:rgba(61, 0, 7, 0.85);
+}
+.seccionServicios .tablaServicios .tdServicio{
+	position:relative;
+	width:23%;
+	vertical-align:top;
+	cursor:pointer;
+    border-radius: 20px;
+	overflow:hidden;
+}
+.seccionServicios .tablaServicios .tdServicio .flechaServicios{
+	position:absolute;
+	width:40px;
+	bottom:20px;
+	left:50%;
+	margin-left:-20px;
+	z-index:9;
+	border-radius:25px;
+}
+.seccionServicios .tablaServicios .tdServicio:hover .flechaServicios{
+	box-shadow:0 0 20px 5px #FFF;
+}
+.seccionServicios .tablaServicios .tdServicio .textoServicio{
+	position:absolute;
+	width:100%;
+	/* font-family:'berlin sans FB'; */
+	font-family:Ebrima;
+	font-size:20px;
+	font-weight:bold;
+	text-shadow: 0px 0px 2px #ccc;
+	color:#FFF;
+	padding:35px 10px;
+	line-height:60px;
+	text-align:center;
+	z-index:9;
+}
+.seccionServicios .tablaServicios .tdServicio img{
+	width:100%;
+	opacity:0.7;
+	margin-bottom:-8px;
+}
+.seccionServicios .tablaServicios .tdSeparador{
+	width:2%;
+}
+.seccionServicios .tablaServicios .descripcionServicios{
+	background: rgba(151, 18, 40, 0.5);
+    border-radius: 20px;
+    padding: 20px;
+    background-image: url(../images/bkgServicios.png);
+    background-size: cover;
+    font-size: 15px;
+    color: #FFF;
+	display:none;
+}
+.seccionServicios .tablaServicios .descripcionServicios .contServicios{
+	display:none;
+	/* text-shadow: 0px 0px 2px #ccc; */
+	font-size:16px;
+	padding-bottom:33px;
+}
+.seccionServicios .tablaServicios .descripcionServicios .contServicios .tituloServicioPpal{
+	font-size: 20px;
+    line-height: 35px;
+    color: #fff;
+}
+.seccionServicios .tablaServicios .descripcionServicios .contServicios .subtituloServicio{
+	font-size:18px;
+	font-weight:bold;
+	/* text-decoration:underline; */
+}
+.seccionServicios .tablaServicios .descripcionServicios .contServicios .logoAppdate{
+	width:200px;
+	cursor:pointer;
+}
+.seccionServicios .tablaServicios .descripcionServicios .contServicios .subtituloServicio .imgBullet{
+	width:20px;
+	transform:rotate(270deg);
+    vertical-align: middle;
+    margin-right: 15px;
+}
+.seccionServicios .tablaServicios .descripcionServicios .contServicios p{
+	text-align:center;
+}
+.seccionServicios .tablaServicios .descripcionServicios .contServicios .link{
+	font-weight:bold;
+	cursor:pointer;
+}
+.tablaServiciosRESP{
+	display:none;
+}
+@media screen and (max-width: 1000px) {
+	.tablaServicios{
+		display:none;
+	}
+	.tablaServiciosRESP{
+		display:table;
+		width:100%;
+		height:100%;
+		border-spacing:0;
+	}
+	#seccionServicios{
+		padding:0;
+		/* padding-bottom:140px; */
+	}
+	.tablaServiciosRESP .opcionServiciosRESP{
+		position:relative;
+		width:100%;
+		font-family:Ebrima;
+		font-size:40px;
+		font-weight:bold;
+		text-shadow: 0px 0px 2px #ccc;
+		color:#FFF;
+		text-align:center;
+	}
+	.tablaServiciosRESP .opcionServiciosRESP:before{
+		content:'';
+		position:absolute;
+		width:50px;
+		height:50px;
+		top:50%;
+		margin-top:-25px;
+		left:20%;
+		background-image:url(../images/iconos/flechaServiciosDer.png) !important;
+		background-repeat:no-repeat !important;
+		background-size: 50px !important;
+		transition:0.3s;
+	}
+	.tablaServiciosRESP #cajaServicio1R{
+		background:rgba(181, 11, 37, 1);
+	}
+	.tablaServiciosRESP #cajaServicio2R{
+		background:rgba(150, 8, 30, 1);
+	}
+	.tablaServiciosRESP #cajaServicio3R{
+		background:rgba(93, 3, 15, 1);
+	}
+	.tablaServiciosRESP #cajaServicio4R{
+		background:rgba(61, 0, 7, 1);
+	}
+	.tablaServiciosRESP .contServiciosRESP{
+		display:none;
+		font-size:35px;
+		padding-bottom:33px;
+		padding:20px;
+		color:#FFF;
+	}
+	.tablaServiciosRESP .contServiciosRESP .tituloServicioPpal{
+		font-size: 35px;
+		line-height: 35px;
+		color: #fff;
+	}
+	.tablaServiciosRESP .contServiciosRESP .subtituloServicio{
+		font-size:35px;
+		font-weight:bold;
+	}
+	.tablaServiciosRESP .contServiciosRESP .logoAppdate{
+		width:200px;
+		cursor:pointer;
+	}
+	.tablaServiciosRESP .contServiciosRESP .subtituloServicio .imgBullet{
+		width:35px;
+		transform:rotate(270deg);
+		vertical-align: middle;
+		margin-right: 15px;
+	}
+	.tablaServiciosRESP .contServiciosRESP p{
+		text-align:center;
+	}
+	.tablaServiciosRESP .contServiciosRESP p a{
+		text-decoration: none;
+		color: #FFF;
+		font-weight: bold;
+	}
+	.tablaServiciosRESP .contServiciosRESP .link{
+		font-weight:bold;
+		cursor:pointer;
+	}
+	.tablaServiciosRESP #servicio1R{
+		background:rgba(181, 11, 37, 0.7);
+	}
+	.tablaServiciosRESP #servicio2R{
+		background:rgba(150, 8, 30, 0.7);
+	}
+	.tablaServiciosRESP #servicio3R{
+		background:rgba(93, 3, 15, 0.7);
+	}
+	.tablaServiciosRESP #servicio4R{
+		background:rgba(61, 0, 7, 0.7);
+	}
+
+}
+	
+/** ***** NOSOTROS ***** **/
+.seccionNosotros{
+	background-image:url(../images/bkgServicios.png);
+	background-size:cover;
+	padding-bottom:100px;
+}
+.seccionNosotros .tablaNosotros{
+	width:80%;
+	margin-left:10%;
+	border-spacing: 0;
+    border-collapse: collapse;
+}
+.seccionNosotros .tablaNosotros .cajaSeccionNosotros{
+	position:relative;
+	width:30%;
+	background:rgba(151, 18, 40,0.27);
+    height: 269px;
+	border-radius: 20px;
+	border-bottom-right-radius:0;
+	cursor:pointer;
+    overflow: hidden;
+}
+.seccionNosotros .tablaNosotros .cajaSeccionNosotros:before{
+	content: '';
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: -1;
+    background-position: center;
+}
+.seccionNosotros .tablaNosotros .cajaSeccionNosotros1:before{
+    background-image: url(../images/nosotros/caja1.png);
+	background-position: 55px;
+    background-size: 281px;
+}
+.seccionNosotros .tablaNosotros .cajaSeccionNosotros2:before{
+	background-image: url(../images/nosotros/caja2.png);
+	background-size: 70%;
+    background-position: 75px center;
+}
+.seccionNosotros .tablaNosotros .cajaSeccionNosotros3:before{
+	background-image: url(../images/nosotros/caja3.png);
+    background-size: 301px;
+    background-position: 48px -21px;
+}
+.seccionNosotros .tablaNosotros .cajaSeccionNosotros:first-child{
+	/* border-bottom-left-radius: 20px; */
+}
+.seccionNosotros .tablaNosotros .cajaSeccionNosotros:last-child{
+	/* border-bottom-right-radius: 20px; */
+}
+.seccionNosotros .tablaNosotros .cajaSeccionNosotros .verticalNos{
+	position:absolute;
+	top:110px;
+	left:-110px;
+	font-size: 20px;
+    color: #FFF;
+    transform: rotate(270deg);
+    padding: 10px;
+    background: rgba(151, 18, 40,1);
+    width: 270px;
+    height: 50px;
+	text-align: center;
+}
+.seccionNosotros .tablaNosotros .fotoNos{
+	width:10px;
+	padding-left: 20px;
+}
+.seccionNosotros .tablaNosotros .fotoNos img{
+	float:left;
+	margin-right:30px;
+	border-radius: 20px;
+	box-shadow: 0 0 10px 0px #FFF;
+	max-width:153px;
+}
+.seccionNosotros .tablaNosotros .datosNos{
+	color:#FFF;
+	vertical-align:top;
+	text-align:left;
+	font-size:15px;
+	padding: 0 20px;
+	line-height:24px;
+}
+.seccionNosotros .tablaNosotros .txtGral .datosNos{
+	width:50%;
+}
+.seccionNosotros .tablaNosotros .datosNos h1{
+	font-weight:bold;
+	font-size:20px;
+}
+.seccionNosotros .tablaNosotros .datosNos p{
+	color:#FFF;
+	vertical-align:top;
+	font-size:15px;
+}
+.seccionNosotros .tablaNosotros .datosNos ul li{
+	list-style: none;
+    background-size: 20px;
+    background-image: url(../images/iconos/bulletNasatra.png);
+    background-repeat: no-repeat;
+    background-position: 0px 3px;
+    padding-left: 35px;
+	margin-top:15px;
+}
+#XQNosotros,
+#XQDiferenciamos,
+#quienesSomos{
+	display:none;
+	width:100%;
+	background: rgba(156,19,41,0.5);
+    border-radius: 20px;
+	padding:20px;
+	padding-top:40px;
+}
+.seccionNosotros .tablaNosotros .flechitaNosotrosSeleccionado{
+	position:relative;
+	height:0;
+	padding:0;
+	padding-left:16%;
+	transition:1s;
+	display:none;
+}
+.seccionNosotros .tablaNosotros .flechitaNosotrosSeleccionado img{
+	width: 40px;
+    opacity: 0.5;
+    margin-bottom: -4px;
+    padding: 0;
+
+}
+.seccionNosotros .tablaNosotrosRESP{
+	display:none;
+}
+@media screen and (max-width: 1000px) {
+	.seccionNosotros{
+		padding:0;
+		/* padding-bottom:140px; */
+	}
+	.seccionNosotros .tablaNosotros{
+		display:none;
+	}
+	.seccionNosotros .tablaNosotrosRESP{
+		display:table;
+		width:100%;
+		border-spacing: 0;
+		border-collapse: collapse;
+	}
+	.seccionNosotros .tablaNosotrosRESP .cajaSeccionNosotros{
+		position:relative;
+		width:100%;
+		background:rgba(151, 18, 40,0.27);
+		cursor:pointer;
+		overflow: hidden;
+	}
+	.seccionNosotros .tablaNosotrosRESP .cajaSeccionNosotros:before{
+		content: '';
+		background-repeat: no-repeat;
+		background-size: cover;
+		position: absolute;
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		z-index: -1;
+		background-position: center center;
+	}
+	.seccionNosotros .tablaNosotrosRESP .cajaSeccionNosotros1:before{
+		background-image: url(../images/nosotros/caja1.png);
+		background-position: center 40px;
+		background-size: contain;
+	}
+	.seccionNosotros .tablaNosotrosRESP .cajaSeccionNosotros2:before{
+		background-image: url(../images/nosotros/caja2.png);
+		background-position: center 40px;
+		background-size: contain;
+	}
+	.seccionNosotros .tablaNosotrosRESP .cajaSeccionNosotros3:before{
+		background-image: url(../images/nosotros/caja3.png);
+		background-position: center;
+		background-size: contain;
+	}
+	.seccionNosotros .tablaNosotrosRESP .cajaSeccionNosotros .verticalNos{
+		position: absolute;
+		top: 0;
+		left: 0px;
+		font-size: 40px;
+		color: #FFF;
+		padding: 10px;
+		background: #971228;
+		width: 100%;
+		height: auto;
+		text-align: center;
+	}
+	.seccionNosotros .tablaNosotrosRESP .cajaSeccionNosotros .verticalNos img{
+		transition:0.3s;
+	}
+	.seccionNosotros .tablaNosotrosRESP .fotoNos{
+		width:10px;
+		padding-left: 20px;
+	}
+	.seccionNosotros .tablaNosotrosRESP .fotoNos img{
+		width:100%;
+		margin-right:30px;
+		border-radius: 20px;
+		box-shadow: 0 0 10px 0px #FFF;
+	}
+	.seccionNosotros .tablaNosotrosRESP .fotoNos .verMas{
+		display:block;
+		margin:0 auto;
+		width:40px;
+		box-shadow:none;
+		border-radius:40px;
+	}
+	.seccionNosotros .tablaNosotrosRESP .datosNos{
+		width:50%;
+		color:#FFF;
+		vertical-align:top;
+		text-align:left;
+		font-size:35px;
+		padding: 0 20px;
+	}
+	.seccionNosotros .tablaNosotrosRESP .datosNos #bioLorena,
+	.seccionNosotros .tablaNosotrosRESP .datosNos #bioDoris{
+		display:none;
+		width:100%;
+	}
+	.seccionNosotros .tablaNosotrosRESP .txtGral .datosNos{
+		width:50%;
+	}
+	.seccionNosotros .tablaNosotrosRESP .datosNos h1{
+		font-weight:bold;
+		font-size:35px;
+	}
+	.seccionNosotros .tablaNosotrosRESP .datosNos p{
+		color:#FFF;
+		vertical-align:top;
+		font-size:35px;
+	}
+	.seccionNosotros .tablaNosotrosRESP .datosNos ul li{
+		list-style: none;
+		background-size: 45px;
+		background-image: url(../images/iconos/bulletNasatra.png);
+		background-repeat: no-repeat;
+		background-position: 0px 3px;
+		padding-left: 60px;
+		margin-top: 45px;
+		font-size: 35px;
+	}
+	#XQNosotrosR,
+	#XQDiferenciamosR,
+	#quienesSomosR{
+		display:none;
+		width:100%;
+		background: rgba(156,19,41,0.5);
+		padding:20px;
+		padding-top:40px;
+		border-top: solid 1px #971228;
+		border-bottom: solid 1px #971228;
+	}
+}
+
+
+/** ***** CONTACTO ***** **/
+.seccionContacto{
+	background-image:url(../images/bkgServicios.png);
+	background-size:cover;
+	padding-bottom:50px;
+}
+.seccionContacto .tablaContacto{
+	width:90%;
+	margin-left:5%;
+	margin-top:39px;
+}
+.seccionContacto .tablaContacto .campos{
+	width:50%;
+}
+.seccionContacto .tablaContacto .campos textarea,
+.seccionContacto .tablaContacto .campos input{
+	width:100%;
+	font-size:15px;
+	padding:10px 15px;
+	background:rgba(151, 18, 40, 0.67);
+	color:#FFF;
+	border-radius:10px;
+	margin-bottom:10px;
+	border:none;
+	margin-bottom:17px;
+	background: rgba(151, 18, 40, 0.67);
+	/*
+	background: rgba(158,19,42,0.67);
+	background: -moz-linear-gradient(-45deg, rgba(158,19,42,0.67) 0%, rgba(52,1,15,0.67) 100%);
+	background: -webkit-gradient(left top, right bottom, color-stop(0%, rgba(158,19,42,0.67)), color-stop(100%, rgba(52,1,15,0.67)));
+	background: -webkit-linear-gradient(-45deg, rgba(158,19,42,0.67) 0%, rgba(52,1,15,0.67) 100%);
+	background: -o-linear-gradient(-45deg, rgba(158,19,42,0.67) 0%, rgba(52,1,15,0.67) 100%);
+	background: -ms-linear-gradient(-45deg, rgba(158,19,42,0.67) 0%, rgba(52,1,15,0.67) 100%);
+	background: linear-gradient(135deg, rgba(158,19,42,0.67) 0%, rgba(52,1,15,0.67) 100%);
+	*/
+}
+.seccionContacto .tablaContacto .campos textarea::placeholder,
+.seccionContacto .tablaContacto .campos input::placeholder{
+	color:#FFF;
+	font-family:ebrima !important;
+}
+.seccionContacto .tablaContacto .campos textarea{
+	resize:none;
+	height:150px;
+}
+.seccionContacto .tablaContacto .col2{
+	color:#9c1329;
+	font-size:15px;
+	padding-left:77px;
+}
+.seccionContacto .tablaContacto .col2 .logoAppdate{
+	float:right;
+	width:160px;
+	cursor:pointer;
+}
+.seccionContacto .tablaContacto .frase{
+	font-style:italic;
+}
+.seccionContacto .tablaContacto .datos{
+	width:100%;
+	margin-bottom:13px;
+}
+.seccionContacto .tablaContacto .datos span{
+	font-weight:bold;
+}
+.seccionContacto .tablaContacto .enviar{
+	text-align:center;
+}
+.seccionContacto .tablaContacto .enviar input{
+	background: rgba(158,19,42,1);
+	background: -moz-linear-gradient(-45deg, rgba(158,19,42,1) 0%, rgba(52,1,15,1) 100%);
+	background: -webkit-gradient(left top, right bottom, color-stop(0%, rgba(158,19,42,1)), color-stop(100%, rgba(52,1,15,1)));
+	background: -webkit-linear-gradient(-45deg, rgba(158,19,42,1) 0%, rgba(52,1,15,1) 100%);
+	background: -o-linear-gradient(-45deg, rgba(158,19,42,1) 0%, rgba(52,1,15,1) 100%);
+	background: -ms-linear-gradient(-45deg, rgba(158,19,42,1) 0%, rgba(52,1,15,1) 100%);
+	background: linear-gradient(135deg, rgba(158,19,42,1) 0%, rgba(52,1,15,1) 200%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#9e132a', endColorstr='#34010f', GradientType=1 );
+	color:#FFF;
+	padding:10px 20px;
+	font-family:ebrima;
+	font-size:17px;
+	border:none;
+	border-radius:10px;
+	cursor:pointer;
+	transition:1s;
+}
+.contactoRESP{
+	display:none;
+}
+@media screen and (max-width: 1000px) {
+	.contactoPC{
+		display:none;
+	}
+	.contactoRESP{
+		display:table-cell;
+	}
+	.seccionContacto .tablaContacto{
+		width:100%;
+		margin:0;
+	}
+	.seccionContacto .tablaContacto .col2 {
+		color: #9c1329;
+		font-size: 35px;
+		padding: 20px;
+	}
+	.seccionContacto .tablaContacto .campos{
+		padding:20px;
+	}
+	.seccionContacto .tablaContacto .campos textarea,
+	.seccionContacto .tablaContacto .campos input{
+		font-size:35px;
+	}
+	.seccionContacto .tablaContacto .enviar{
+		padding:20px;
+	}
+	.seccionContacto .tablaContacto .enviar input{
+		width:100%;
+		font-size:35px;
+	}
+	.seccionContacto .tablaContacto .campos textarea::placeholder,
+	.seccionContacto .tablaContacto .campos input::placeholder{
+		color:#FFF;
+		font-family:ebrima !important;
+	}
+}
+
+/** ***** SEPARADORES ***** **/
+.separador{
+	position:relative;
+	width:100%;
+	height:250px;
+	background-position:center center;
+	background-size:cover;
+	background-repeat:no-repeat;
+	background-attachment:fixed;
+}
+.separador:before{
+	position: absolute;
+	content: "";
+	/* background:rgba(255, 255, 255, 0.5); */
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+.separador .fraseSeparador{
+	position: absolute;
+    width: 100%;
+    padding: 20px;
+    text-align: center;
+    color: rgba(197, 15, 31, 0.6);
+    font-size: 18px;
+    top: 50%;
+    margin-top: -71px;
+	font-weight:bold;
+}
+.separador .fraseSeparador .logoAppdate{
+	width:200px;
+	cursor:pointer;
+}
+.separador .fraseSeparador span{
+	float: right;
+	font-size: 16px;
+	text-align: center;
+	color: #FFF;
+	font-weight: normal;
+	background-color: rgba(151, 18, 40, 0.77);
+	padding: 5px 25px;
+	border-radius: 25px;
+}
+.separador .tituloSeparador{
+	position:absolute;
+	width:100%;
+	font-size:23px;
+	color:#FFF;
+	font-weight:bold;
+	text-align:center;
+	padding:6px 20px;
+	background:rgba(151, 18, 40, 0.67);
+	bottom:0;
+}
+#separador1{
+	background-image:url(../images/separadores/Separador_1.jpg);
+}
+#separador2{
+	background-image:url(../images/separadores/Separador_2.jpg);
+}
+#separador2 .fraseSeparador{
+	margin-top:-120px;
+}
+#separador2 .fraseSeparador span{
+	color:#FFF;
+	font-size:20px;
+	cursor:pointer;
+}
+#separador3{
+	background-image:url(../images/separadores/Separador_3.jpg);
+}
+@media screen and (max-width: 1000px) {
+	.separador .tituloSeparador{
+		font-size:40px;
+	}
+	.separador .fraseSeparador{
+		margin-top:-130px;
+	}
+	.separador .fraseSeparador span{
+		font-size:35px;
+	}
+	#separador1{
+		background-image:url(../images/separadores/Separador_1_res.jpg);
+	}
+	#separador2{
+		background-image:url(../images/separadores/Separador_2_res.jpg);
+	}
+	#separador3{
+		background-image:url(../images/separadores/Separador_3_res.jpg);
+	}
+}
+
+/** ***** PIE ***** **/
+.pie{
+	position:relative;
+	display:block;
+	width:100%;
+	background-repeat:no-repeat;
+	background-size:cover;
+	background:rgba(255,255,255,0.8);
+}
+.pie:before{
+	content: '';
+	background-image:url(../images/bkgPie.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: -1;
+    background-position: center;
+}
+.pie .tablaPie{
+	width:100%;
+	margin-left:0;
+}
+.pie .tablaPie .columnaPie{
+	position: relative;
+    width: 33%;
+    padding: 10px;
+    font-size: 15px;
+    color: #000;
+}
+.pie .tablaPie .columnaPie:last-child{
+	text-align:center;
+}
+.pie .tablaPie .columnaPie .tituloPie{
+	display:block;
+	width:100%;
+	color:#3b0211;
+	font-size:12px;
+	margin-bottom:15px;
+}
+.pie .tablaPie .columnaPie .telefonoPie{
+	display: block;
+    width: 100%;
+    color: #000;
+    font-size: 9px;
+    background-image: url(../images/iconos/telPie.png);
+    background-repeat: no-repeat;
+    background-position: left center;
+    padding-left: 25px;
+    background-size: 16px;
+}
+.pie .tablaPie .columnaPie .mailPie{
+    display: block;
+    width: 100%;
+    color: #000;
+    font-size: 9px;
+    background-image: url(../images/iconos/mailPie.png);
+    background-repeat: no-repeat;
+    background-position: left center;
+    padding-left: 25px;
+    background-size: 16px;
+	margin-top:10px;
+	min-height:20px;
+}
+.pie .tablaPie .columnaPie .logoAppdate{
+	width:150px;
+}
+.pie .tablaPie .columnaPie .redes{
+	width:100%;
+	padding:10px 0;
+	overflow:auto;
+}
+.pie .tablaPie .columnaPie .redes img{
+	/* float:right; */
+	margin-left:20px;
+}
+.pie .tablaPie .columnaPie a{
+	text-decoration:none;
+	font-family:Ebrima;
+	font-size:15px;
+	color:#e93400;
+}
+.tablaPieRESP{
+	display:none;
+}
+@media screen and (max-width: 1000px) {
+	.tablaPiePC{
+		display:none;
+	}
+	.tablaPieRESP{
+		display:table;
+	}
+	.pie .tablaPie .columnaPie,
+	.pie .tablaPie .columnaPie a{
+		font-size:22px;
+	}
+	.pie .tablaPie .columnaPie .redes img {
+		margin-left: 30px;
+		width: 40px;
+	}
+}

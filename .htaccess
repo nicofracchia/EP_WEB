@@ -1,0 +1,6 @@
+<IfModule mod_rewrite.c>
+RewriteEngine On
+RewriteCond %{HTTPS} off
+RewriteCond %{HTTP_HOST} ^(www\.)?esferapublica\.com\.ar$ [NC]
+RewriteRule ^(.*)$ https://esferapublica.com.ar/$1 [L,R=301]
+</IfModule>
